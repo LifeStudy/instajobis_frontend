@@ -1,3 +1,18 @@
+## UI
+
+![image](https://github.com/arjdev69/Feed_Instagram_Web/blob/master/Files/Screenshot%20from%202019-06-21%2019-52-19.png)
+
+
+![image](https://github.com/arjdev69/Feed_Instagram_Web/blob/master/Files/Screenshot%20from%202019-06-21%2019-53-02.png)
+
+![image](https://github.com/arjdev69/Feed_Instagram_Web/blob/master/Files/Screenshot%20from%202019-06-21%2019-53-37.png)
+
+![image](https://github.com/arjdev69/Feed_Instagram_Web/blob/master/Files/Screenshot%20from%202019-06-21%2019-54-53.png)
+
+![image](https://github.com/arjdev69/Feed_Instagram_Web/blob/master/Files/Screenshot%20from%202019-06-21%2019-56-09.png)
+
+
+# Steps for Install
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
