@@ -15,3 +15,8 @@ header#main-header .header-content {
     align-items: center;
     justify-content: space-between;
 }
+
+header img{
+    height: 32;
+    width: 32;
+}
