@@ -16,7 +16,7 @@ header#main-header .header-content {
     justify-content: space-between;
 }
 
-header img{
-    height: 32;
-    width: 32;
+.header-content img{
+    height: 54px;
+    width: 54px;
 }
