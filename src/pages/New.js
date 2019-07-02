@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './New.css';
 import api from '../services/api';
+import ReactLoading from 'react-loading';
+
+const Load = ({ type, color }) => (
+    <ReactLoading type={type} color={color} height={'5%'} width={'20%'} />
+);
 class New extends Component {
     state = {
         image: null,
@@ -8,9 +13,11 @@ class New extends Component {
         place: '',
         description: '',
         hashtags: '',
+        active: true
     };
 
     handleSubmit = async e => {
+        this.setState({ active: false });
         e.preventDefault();
 
         const data = new FormData();
@@ -34,33 +41,35 @@ class New extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    render(){
+    render() {
         return (
-            <form id="new-post" onSubmit={this.handleSubmit}>
-                <input type="file" onChange={this.handleImageChange} />
+            <section>
+                <form id="new-post" onSubmit={this.handleSubmit}>
+                    <input type="file" onChange={this.handleImageChange} />
 
-                <input type="text" name="author" placeholder="Autor do post" 
-                onChange={this.handleChange}
-                value={this.state.author}
-                />
+                    <input type="text" name="author" placeholder="Autor do post"
+                        onChange={this.handleChange}
+                        value={this.state.author}
+                    />
 
-                <input type="text" name="place" placeholder="Local do post" 
-                onChange={this.handleChange}
-                value={this.state.place}
-                />
+                    <input type="text" name="place" placeholder="Local do post"
+                        onChange={this.handleChange}
+                        value={this.state.place}
+                    />
 
-                <input type="text" name="description" placeholder="Descrição do post" 
-                onChange={this.handleChange}
-                value={this.state.description}
-                />
+                    <input type="text" name="description" placeholder="Descrição do post"
+                        onChange={this.handleChange}
+                        value={this.state.description}
+                    />
 
-                <input type="text" name="hashtags" placeholder="Hashtags do post" 
-                onChange={this.handleChange}
-                value={this.state.hashtags}
-                />
-
-                <button type="submit">Enviar</button>
-            </form>
+                    <input type="text" name="hashtags" placeholder="Hashtags do post"
+                        onChange={this.handleChange}
+                        value={this.state.hashtags}
+                    />
+                    
+                    {this.state.active ? <button type="submit">Enviar</button> : <Load id="load" type="bars" color="blue" /> }
+                </form>
+            </section>
         );
     }
 }

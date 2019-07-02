@@ -32,3 +32,14 @@ form#new-post button {
   font-weight: bold;
   cursor: pointer;
 }
+
+form#new-post div {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 0;
+  margin: auto;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
