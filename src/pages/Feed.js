@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import api from '../services/api';
 import io from 'socket.io-client';
-import './Feed.css';
+
+import { List } from './FeedList';
 
 import more from '../assets/more.svg';
 import like from '../assets/like.svg';
@@ -43,18 +44,18 @@ class Feed extends Component {
 
     render() {
         return (
-            <section id="post-list">
+            <List>
                 {this.state.feed.map(post => (
                     <article key={post._id} >
                         <header>
-                            <div className="user-info">
+                            <div>
                                 <span>{post.author}</span>
                                 <span className="place">{post.place}</span>
                             </div>
                             <img src={more} alt="Mais" />
                         </header>
 
-                        <img src={`${process.env.REACT_APP_API_URL}/files/${post.image}`} alt="" />
+                        <img className="imgUser" src={`${process.env.REACT_APP_API_URL}/files/${post.image}`} alt="" />
 
                         <footer>
                             <div className="actions">
@@ -74,7 +75,7 @@ class Feed extends Component {
                         </footer>
                     </article>
                 ))}
-            </section>
+            </List>
         );
     }
 }
