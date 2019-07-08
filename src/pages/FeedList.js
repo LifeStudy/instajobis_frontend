@@ -32,10 +32,10 @@ export const List = styled.section`
                     margin-top: 3px;
                 }
             }
+        }
 
-            img.imgUser{
-                width: 100%;
-            }
+        img.imgUser{
+            width: 100%;
         }
 
         footer{
